@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ <class name="com.hibernate.office.Printers" table="PRINTERS">
+  <id name="printer_id">
+  <generator class="assigned">
+ </generator>
+ 	</id>
+ 	<property name="type"></property>
+ 	<property name="cartridgeType"></property>
+  </class>
+  </hibernate-mapping>

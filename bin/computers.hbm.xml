@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ <class name="com.hibernate.office.Computers" table="Computers">
+ <id name="pc_id">
+ <generator class="increment">
+ </generator>
+ </id>
+ <map name="printers" cascade="all" table="PC_PRINT">
+ 	<key column="pc_id" />
+ 	<index column="idx" type="integer"/>
+  		<many-to-many column="printer_id" class="com.hibernate.office.Printers"/>
+  </map>
+  <property name="processor"></property>
+  <property name="operatingSystem"></property>
+  </class>
+ </hibernate-mapping>
